@@ -24,7 +24,7 @@ Review concepts:
   <title>JS + CSS Clock</title>
 
   <!--Step 1: add jQuery with <script></script> tags-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  <script src=""></script>
 
 </head>
 <body>
@@ -78,52 +78,33 @@ Review concepts:
       position: absolute;
       top:50%;
       /*Step 6: fix transform-origin*/
-      transform-origin: 100%;
+
 
       /*Step 10: add transition to animation*/
-      transition: all 0.05s;
-      transition-timing-function: cubic-bezier(0.16, 1.32, 1, -0.11);
     }
 
   </style>
 
 <script>
 
-// Step 2: select the clock hands (seconds, minutes, hours) and store them into variables
-var secondHand = $('.second-hand');
-var minuteHand = $('.min-hand');
-var hourHand = $('.hour-hand');
-
 function setDate(){
-  // Step 3: get the current time (in seconds, minutes, hours)
-  var now = new Date();
-  var seconds = now.getSeconds();
-  var minutes = now.getMinutes();
-  var hours = now.getHours();
+  //Step 2: select the clock hands (seconds, minutes, hours) and store them into variables
 
-  // Step 4: calculate the # of degrees (out of 360) 
-  var secondsDegrees = ((seconds / 60) * 360 + 90) % 360;
-  var minutesDegrees = ((minutes / 60) * 360 + 90) % 360;
-  var hoursDegrees = ((hours / 24) * 360 + 90) % 360;
+  //Step 3: get the current time (in seconds, minutes, hours)
 
-  // Step 5: change the clock hand css to transform to the correct # of degrees
-  secondHand.css('transform', 'rotate(' + secondsDegrees + 'deg)');
-  minuteHand.css('transform', 'rotate(' + minutesDegrees + 'deg)');
-  hourHand.css('transform', 'rotate(' + hoursDegrees + 'deg)');
+  //Step 4: calculate the # of degrees (out of 360) 
 
-  console.log(hours + ':' + minutes + ':' + seconds);
+  //Step 5: change the clock hand css to transform to the correct # of degrees
+
 }
 
+//Step 7: call the setDate function
 
-// Steps 7-9: call the setDate function
-// place the setDate function into an interval
-// place the interval into a document ready function
+//Step 8: place the setDate function into an interval
 
-$('document').ready(function() {
+//Step 9: place the interval into a document ready function
+    
 
-  setInterval(setDate, 1000);
-
-});
 
 </script>
 </body>
