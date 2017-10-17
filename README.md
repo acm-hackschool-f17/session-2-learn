@@ -4,7 +4,9 @@
 
 **Time:** 6:15 - 8:15 PM
 
-**Teachers**: Nathan Smith, Yvonne Chen
+**Teachers**
+* Yvonne Chen: [link to fb post about teacher]
+* Nathan Smith: [link to fb post about teacher]
 
 # Resources
 
@@ -34,7 +36,8 @@
 
 Option 1 - Via Download
 * Click on the green button at the top right corner of this page
-* click "Download ZIP".
+* Click "Download ZIP"
+* Open the starter folder in your preferred editor
 
 Option 2 - Via Git
 * Run the following in your terminal:
@@ -44,8 +47,8 @@ $ cd session-2-learn/starter
 ```
 
 
-##### Step 2:
+### Step 2:
 
-##### Step 3:
+### Step 3:
 
-##### Step 4:
+### Step 4:
