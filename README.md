@@ -5,8 +5,8 @@
 **Time:** 6:15 - 8:15 PM
 
 **Teachers**
-* Yvonne Chen: [link to fb post about teacher]
-* Nathan Smith: [link to fb post about teacher]
+* [Yvonne Chen](https://www.facebook.com/events/123499401688253/permalink/126046088100251/)
+* [Nathan Smith](https://www.facebook.com/events/123499401688253/permalink/126046434766883/)
 
 # Resources
 
