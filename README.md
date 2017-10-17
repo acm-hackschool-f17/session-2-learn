@@ -15,7 +15,8 @@
 * [Session 2 - Grids and JavaScript](http://tinyurl.com/hackschool17-session2-slides)
 
 **Cheatsheets**
-* [HTML and CSS](http://tinyurl.com/hackschool-html-css-review)
+* [HTML and CSS Review](http://tinyurl.com/hackschool-html-css-step)
+* [HTML and CSS (Comprehensive)](http://tinyurl.com/hackschool-html-css-review)
 
 **Mentor voting form**: [fill this in]
 
