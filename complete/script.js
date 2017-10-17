@@ -27,9 +27,6 @@ function handleImageClick(e) {
 }
 
 $('document').ready(function() {
-
-	const info = $('.info-pane');
-	info.hide();
 	
 	attachEventHandlers();
 	
