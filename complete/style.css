@@ -1,0 +1,72 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #212121;
+}
+
+.header {
+	color: white;
+	padding: 40px 0;
+}
+
+.header h1, .header a {
+	width: 100%;
+	text-align: center;
+}
+
+.header .logo {
+	width: 50px;
+	height: 50px;
+	margin-right: 20px;
+}
+
+.col, 
+[class^=col-] {
+	height: 200px;
+	padding: 10px;
+}
+
+.image {
+	width: 100%;
+	height: 100%;
+	background: white;
+	background-size: cover;
+	background-position: 50% 50%;
+	cursor: pointer;
+	border: 2px solid rgba(0,0,0,0);
+
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+.image:hover {
+	border: 2px solid rgba(255,255,255,0.5);
+}
+
+.image.selected {
+	border: 2px solid white;
+}
+
+.image.not-selected {
+	opacity: 0.5;
+}
+
+.info-pane {
+	height: 400px;
+	background: black;
+	margin: 0px;
+	padding: 20px;
+}
+
+.info-pane .preview-image {
+	background: white;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+.info-pane .preview-text {
+	padding-left: 20px;
+	color: white;
+}
