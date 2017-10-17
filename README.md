@@ -9,7 +9,8 @@
 
 **Teachers**: Nathan Smith, Yvonne Chen
 
-### Resources
+-----
+# Resources
 
 **Slides**: [fill this in]
 
@@ -19,7 +20,7 @@
 
 ----
 
-### What we'll be learning today
+# What we'll be learning today
 
 * Bootstrap
   * Linking to external resource
@@ -32,9 +33,9 @@
   * jQuery
 
 
-### What we'll be building today: A Simple Photogallery
+# What we'll be building today: A Simple Photogallery
 
-##### Step 1: Download starter code
+### Step 1: Download starter code
 
 Option 1 - Via Download
 * Click on the green button at the top right corner of this page
