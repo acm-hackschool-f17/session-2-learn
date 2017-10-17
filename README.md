@@ -1,15 +1,11 @@
 # Hackschool Learn Session 2: Grids & JavaScript
 
-
-### Event Details
-
 **Location:** Covel 227
 
 **Time:** 6:15 - 8:15 PM
 
 **Teachers**: Nathan Smith, Yvonne Chen
 
------
 # Resources
 
 **Slides**: [fill this in]
@@ -18,7 +14,6 @@
 
 **Attendance code**: will be available during session
 
-----
 
 # What we'll be learning today
 
