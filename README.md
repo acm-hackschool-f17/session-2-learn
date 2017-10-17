@@ -10,7 +10,12 @@
 
 # Resources
 
-**Slides**: [fill this in]
+**Slides**: 
+* [Session 1 - HTML and CSS](http://tinyurl.com/hackschool17-session1-slides)
+* [Session 2 - Grids and JavaScript](http://tinyurl.com/hackschool17-session2-slides)
+
+**Cheatsheets**
+* [HTML and CSS](http://tinyurl.com/hackschool-html-css-review)
 
 **Mentor voting form**: [fill this in]
 
