@@ -122,7 +122,7 @@ Let's head back to the `TODO`s marked here:
 </div>
 ```
 
-So we want to create 2 rows of 6 images each. Using bootstrap classes, we can specify `div` elements of width 2, to fill up the 12 unit width.
+So we want to create 2 rows of 6 images each. Using bootstrap classes, we can specify `div` elements of width 2, so that 6 of them will fill up the 12 unit width.
 
 ```
 <div class="col-2">
@@ -154,13 +154,71 @@ Now that we have a single image, we can create a lot more. Let's add in 5 more i
   <div class="col-md-2 col-sm-4">
     <div class="image" style="background-image: url('resources/2.jpg')"></div>
   </div>
+  <!-- continued... -->
+</div>
+
+<div class="row photo-row">
   <div class="col-md-2 col-sm-4">
-    <div class="image" style="background-image: url('resources/3.jpg')"></div>
+    <div class="image" style="background-image: url('resources/7.jpg')"></div>
+  </div>
+  <div class="col-md-2 col-sm-4">
+    <div class="image" style="background-image: url('resources/8.jpg')"></div>
   </div>
   <!-- continued... -->
 </div>
 ```
 
-These are continued, so that photos 1-6 are in row 1, and photos 7-12 are in row 2. Save `index.html`, refresh the page, and you'll see the 2 rows of cats appear!
+These use the 12 photos so that photos 1-6 are in row 1, and photos 7-12 are in row 2. Save `index.html`, refresh the page, and you'll see the 2 rows of kittens appear.
 
 ### Step 5: Start adding some interactivity
+
+Let's finally get started with adding some JavaScript! In case you missed it, here's a quick [refresher](https://www.tutorialspoint.com/javascript/javascript_syntax.htm ) on basic JavaScript syntax.
+
+#### In `script.js`:
+
+The first thing we want to do is make our image boxes clickable by adding event handlers to them. We can see in our "main" function (which is executed when the document has loaded) calls a function `attachEventHandlers`:
+
+```
+$('document').ready(function() {
+	attachEventHandlers();
+});
+```
+
+Hence, this is the function we'll be working in:
+
+```
+function attachEventHandlers() {
+	// TODO
+}
+```
+The first thing we need to do is select the images that we want to be able to click on. Looking back at the html code, we can see that all the images have the class of `image`:
+
+```
+<div class="image" style="background-image: url('resources/7.jpg')"></div>
+```
+
+Therefore, we can select them with the jQuery selector by writing `$('.image')`. We can then add event listeners onto them, passing in the `handleImageClick` function:
+
+```
+$('.image').on('click', handleImageClick);
+```
+
+Translating this line of code into English is basically: when an html element with a class of 'image' is clicked, execute the function `handleImageClick`.
+
+Just to make sure this is working, let's add a `console.log` statement inside the function:
+
+```
+function handleImageClick(event) {
+	const target = $(event.target);
+	const images = $('.photo-row .image');
+	const info = $('.info-pane');
+	const preview = $('.preview-image');
+
+	// TODO
+	console.log('hello world!');
+}
+```
+
+Now, try clicking on any image element, and check your console to see if the string 'hello world' is logged out!
+
+### Step 6: Continue fleshing out interactivity
