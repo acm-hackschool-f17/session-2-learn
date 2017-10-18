@@ -18,7 +18,7 @@
 * [HTML and CSS Review](http://tinyurl.com/hackschool-html-css-step)
 * [HTML and CSS (Comprehensive)](http://tinyurl.com/hackschool-html-css-review)
 
-**Mentor voting form**: [fill this in]
+**Mentor voting form**: [Vote for a mentor here!](http://tinyurl.com/hackschool17-mentors-week3)
 
 **Attendance code**: will be available during session
 
