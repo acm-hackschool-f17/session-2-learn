@@ -392,4 +392,6 @@ We want to then update the preview image with this css style property, so we add
 preview.css('background-image', target.css('background-image'));
 ```
 
+Placing this in the `else` block after `info.fadeIn(200);` is our final step.
+
 Great! Save everything, refresh your page, and you should now have a working demo of the photo gallery!
