@@ -10,7 +10,7 @@
 
 # Resources
 
-**Slides**: 
+**Slides**:
 * [Session 1 - HTML and CSS](http://tinyurl.com/hackschool17-session1-slides)
 * [Session 2 - Grids and JavaScript](http://tinyurl.com/hackschool17-session2-slides)
 
@@ -36,7 +36,7 @@
   * jQuery
 
 
-# What we'll be building today: A Simple Photogallery
+# What we'll be building today: An Interactive Photogallery
 
 ### Step 1: Download starter code
 
@@ -52,9 +52,115 @@ $ git clone git@github.com:acm-hackschool-f17/session-2-learn.git
 $ cd session-2-learn/starter
 ```
 
+### Step 2: Familiarize yourself with the starter code
 
-### Step 2:
 
-### Step 3:
+#### In `index.html`:
 
-### Step 4:
+This is the bare bones outline of the main page content. It uses [bootstrap classes](http://bootstrapdocs.com/v3.0.3/docs/css/) such as `container` and `row` to specify grid layouts.
+
+Things marked with `TODO` are what you will be filling in.
+
+```
+<div class="container">
+  <!-- omitted -->
+  <div class="row">
+    <!-- TODO -->
+  </div>
+  <div class="row">
+    <!-- TODO -->
+  </div>
+  <!-- omitted -->
+</div>
+```
+
+#### In `style.css`:
+
+This file contains some pre-done custom styling so that you don't have to spend too much time on it this session.
+
+If you're curious, some interesting snippets of CSS code you might want to look into (that weren't discussed in previous sessions) are:
+
+Selectors:
+* `[class^=col-]` - [read more](https://www.w3schools.com/cssref/sel_attr_begin.asp)
+
+CSS Properties:
+* `box-sizing: border-box;` - [read more](https://css-tricks.com/box-sizing/)
+* `background-size: cover;` - [read more](https://docs.brainstormforce.com/background-image-sizes-explained/)
+* `transition: all 0.2s ease;` - [read more](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+
+#### In `script.js`:
+
+These contain the `TODO`s we'll be working on. Don't worry, we'll dive deeper into what these functions do and how to modify it in later steps!
+
+```
+function attachEventHandlers() {
+	// TODO
+}
+
+function handleImageClick(event) {
+	const target = $(event.target);
+	const images = $('.photo-row .image');
+	const info = $('.info-pane');
+	const preview = $('.preview-image');
+
+	// TODO
+
+}
+```
+
+### Step 3: Get started with a single image in our grid
+
+#### In `index.html`:
+
+Let's head back to the `TODO`s marked here:
+```
+<div class="row photo-row">
+  <!-- TODO -->
+</div>
+<div class="row photo-row">
+  <!-- TODO -->
+</div>
+```
+
+So we want to create 2 rows of 6 images each. Using bootstrap classes, we can specify `div` elements of width 2, to fill up the 12 unit width.
+
+```
+<div class="col-2">
+</div>
+```
+
+We also want each box to hold an image. In the `resources` folder, you can look inside and see 12 `.jpg` images, numbered from 1 to 12. We can use these in our image gallery. To reference the first one, we use the relative path `resources/1.jpg` below:
+
+```
+<div class="col-2">
+  <div class="image" style="background-image: url('resources/1.jpg')"></div>
+</div>
+```
+
+Save `index.html`, refresh your page, and you should see a single box on the left, taking about 1/6 of the page width, with a picture of a cat inside!
+
+
+### Step 4: Build out the entire grid
+
+Now that we have a single image, we can create a lot more. Let's add in 5 more in this row, and 6 more in the row below.
+
+#### In `index.html`:
+
+```
+<div class="row photo-row">
+  <div class="col-md-2 col-sm-4">
+    <div class="image" style="background-image: url('resources/1.jpg')"></div>
+  </div>
+  <div class="col-md-2 col-sm-4">
+    <div class="image" style="background-image: url('resources/2.jpg')"></div>
+  </div>
+  <div class="col-md-2 col-sm-4">
+    <div class="image" style="background-image: url('resources/3.jpg')"></div>
+  </div>
+  <!-- continued... -->
+</div>
+```
+
+These are continued, so that photos 1-6 are in row 1, and photos 7-12 are in row 2. Save `index.html`, refresh the page, and you'll see the 2 rows of cats appear!
+
+### Step 5: Start adding some interactivity

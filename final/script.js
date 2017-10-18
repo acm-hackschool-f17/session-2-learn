@@ -3,8 +3,8 @@ function attachEventHandlers() {
 	$('.image').on('click', handleImageClick);
 }
 
-function handleImageClick(e) {
-	const target = $(e.target);
+function handleImageClick(event) {
+	const target = $(event.target);
 	const images = $('.photo-row .image');
 	const info = $('.info-pane');
 	const preview = $('.preview-image');
@@ -27,7 +27,7 @@ function handleImageClick(e) {
 }
 
 $('document').ready(function() {
-	
+
 	attachEventHandlers();
-	
+
 });
