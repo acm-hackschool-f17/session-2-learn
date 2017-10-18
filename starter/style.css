@@ -22,7 +22,7 @@ body {
 	margin-right: 20px;
 }
 
-.col, 
+.col,
 [class^=col-] {
 	height: 200px;
 	padding: 10px;
@@ -46,11 +46,11 @@ body {
 }
 
 .image.selected {
-	/* TODO */
+	border: 2px solid white;
 }
 
 .image.not-selected {
-	/* TODO */
+	opacity: 0.5;
 }
 
 .info-pane {

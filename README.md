@@ -10,6 +10,9 @@
 
 # Resources
 
+**Mentor voting form**:
+* [Vote here before the end of this session!](https://goo.gl/forms/2l8dwaYgPHsXGnhT2)
+
 **Slides**:
 * [Session 1 - HTML and CSS](http://tinyurl.com/hackschool17-session1-slides)
 * [Session 2 - Grids and JavaScript](http://tinyurl.com/hackschool17-session2-slides)
@@ -17,8 +20,6 @@
 **Cheatsheets**
 * [HTML and CSS Review](http://tinyurl.com/hackschool-html-css-step)
 * [HTML and CSS (Comprehensive)](http://tinyurl.com/hackschool-html-css-review)
-
-**Mentor voting form**: [fill this in]
 
 **Attendance code**: will be available during session
 
@@ -221,4 +222,174 @@ function handleImageClick(event) {
 
 Now, try clicking on any image element, and check your console to see if the string 'hello world' is logged out!
 
-### Step 6: Continue fleshing out interactivity
+### Step 6: Add interactivity to selected image
+
+Once we click on an image box, we want the CSS to update in some way to reflect this. In the CSS file, we see that when a class of `selected` is added to an element of class `image`, a border is shown:
+
+```
+.image.selected {
+	border: 2px solid white;
+}
+```
+
+So, in the `script.js` file, we want to trigger this class on the `target` element on click.
+
+
+```
+
+function handleImageClick(event) {
+
+  /*omitted portion*/
+
+	target.addClass('selected');
+
+}
+
+```
+Let's save our `script.js` file and refresh the page. Now, when we click on an image box, the white border appears on it. If we want to be able to de-select an image, we can actually use `toggleClass()` to add and remove a class automatically. However, let's separate this out manually using the `hasClass` method to really see what's happening:
+
+```
+
+function handleImageClick(event) {
+
+	/*omitted portion*/
+
+	if (target.hasClass('selected')) {
+		target.removeClass('selected');
+	}
+	else {
+		target.addClass('selected');
+	}
+
+}
+
+```
+
+Save our `script.js` file, and now when we click on a box that is already selected, the white border goes away.
+
+What if we click on a separate box though? Something undesired happens, another selection is created. We want to actually de-select all the past images if we click on a new one. So let's actually use the `images` variable to do this:
+
+```
+
+function handleImageClick(event) {
+
+	/*omitted portion*/
+
+	if (target.hasClass('selected')) {
+		target.removeClass('selected');
+	}
+	else {
+    images.removeClass('selected');
+		target.addClass('selected');
+	}
+
+}
+
+```
+
+Great!
+
+### Step 6: Add interactivity to images that are NOT selected
+
+If we take a look at the final page we're making, we can see that images that are NOT selecting become greyed out. Let's look at the CSS to see how to do this:
+
+```
+.image.not-selected {
+	opacity: 0.5;
+}
+```
+
+Alright, so there's separate class `not-selected` that can dim the opacity of an image box. Let's add and remove these within our `if/else` block:
+
+```
+
+function handleImageClick(event) {
+
+	/*omitted portion*/
+
+	if (target.hasClass('selected')) {
+		images.removeClass('not-selected');
+		target.removeClass('selected');
+	}
+	else {
+		images.removeClass('selected');
+		images.addClass('not-selected');
+		target.addClass('selected');
+	}
+
+}
+
+```
+
+This is good - the `not-selected` class is added and removed when we toggle. However, we don't want it to be applied to the `target` image box that we just clicked. So we fix this by immediately removing the class from `target` after adding it to all the elements with class `image`.
+
+```
+
+function handleImageClick(event) {
+
+	/*omitted portion*/
+
+	if (target.hasClass('selected')) {
+		images.removeClass('not-selected');
+		target.removeClass('selected');
+	}
+	else {
+		images.removeClass('selected');
+		images.addClass('not-selected');
+		target.addClass('selected');
+		// add this in
+		target.removeClass('not-selected');
+	}
+
+}
+
+```
+
+### Step 7: Showing the info pane
+
+We're on our final step! Now, we want to be able to have our info pane show and hide when we select an image box, and have it display an enlarged version of the image we selected.
+
+The info box is the variable `info`, and we can call jQuery's `fadeIn()` and `fadeOut()` methods on it in our `if/else` block (the number inside is how many milliseconds it transitions for):
+
+```
+
+function handleImageClick(event) {
+
+	/*omitted portion*/
+
+	if (target.hasClass('selected')) {
+		images.removeClass('not-selected');
+		target.removeClass('selected');
+
+		// add this
+		info.fadeOut(200);
+	}
+	else {
+		images.removeClass('selected');
+		images.addClass('not-selected');
+		target.addClass('selected')
+		target.removeClass('not-selected');
+
+		// add this
+		info.fadeIn(200);
+	}
+
+}
+
+```
+
+Our final step is the update the preview image with the one we selected! We can do this by examining the `target` variable's css style property `background-image`:
+
+```
+console.log(target.css('background-image'));
+```
+
+This gives us a string with `url('resource/num.jpg')`
+
+We want to then update the preview image with this css style property, so we add it to the `preview` variable:
+
+```
+preview.css('background-image', target.css('background-image'));
+```
+
+Great! Save everything, refresh your page, and you should now have a working demo of the photo gallery!
