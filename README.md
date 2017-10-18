@@ -16,7 +16,7 @@
 
 **Cheatsheets**
 * [HTML and CSS Review](http://tinyurl.com/hackschool-html-css-step)
-* [HTML and CSS (Comprehensive)](http://tinyurl.com/hackschool-html-css-review)
+* [HTML and CSS (Comprehensive)](http://tinyurl.com/hackschool17-html-css-review)
 
 **Mentor voting form**: [Vote for a mentor here!](http://tinyurl.com/hackschool17-mentors-week3)
 
