@@ -240,7 +240,7 @@ So, in the `script.js` file, we want to trigger this class on the `target` eleme
 
 function handleImageClick(event) {
 
-  /*omitted portion*/
+	/*omitted portion*/
 
 	target.addClass('selected');
 
@@ -280,7 +280,7 @@ function handleImageClick(event) {
 		target.removeClass('selected');
 	}
 	else {
-    images.removeClass('selected');
+		images.removeClass('selected');
 		target.addClass('selected');
 	}
 
