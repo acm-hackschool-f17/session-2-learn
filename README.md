@@ -21,7 +21,7 @@
 * [HTML and CSS Review](http://tinyurl.com/hackschool-html-css-step)
 * [HTML and CSS (Comprehensive)](http://tinyurl.com/hackschool17-html-css-review)
 
-**Attendance code**: will be available during session
+**Attendance code**: #RIPWIFI
 
 
 # What we'll be learning today
