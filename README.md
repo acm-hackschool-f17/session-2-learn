@@ -10,16 +10,17 @@
 
 # Resources
 
-**Mentor voting form**:
-* [Vote here before the end of this session!](https://goo.gl/forms/2l8dwaYgPHsXGnhT2)
-
 **Slides**:
-* [Session 1 - HTML and CSS](http://tinyurl.com/hackschool17-session1-slides)
 * [Session 2 - Grids and JavaScript](http://tinyurl.com/hackschool17-session2-slides)
 
 **Cheatsheets**
-* [HTML and CSS Review](http://tinyurl.com/hackschool-html-css-step)
-* [HTML and CSS (Comprehensive)](http://tinyurl.com/hackschool17-html-css-review)
+* [Bootstrap/JavaScript Review](https://github.com/acm-hackschool-f17/Resources/blob/master/Learn-Session-2-README.md)
+
+**Course Overview Table of Contents**:
+* [Course Schedule](https://github.com/acm-hackschool-f17/Resources/blob/master/README.md#basic-curriculum)
+
+**Mentor voting form**:
+* [Vote here before the end of this session!](https://goo.gl/forms/2l8dwaYgPHsXGnhT2)
 
 **Attendance code**: #RIPWIFI
 
